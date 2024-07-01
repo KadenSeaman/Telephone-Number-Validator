@@ -1,0 +1,115 @@
+:root{
+    --orange-bg: #ffd8be;
+    --white-bg: #fff;
+    --green-button: #b6d69b;
+    --orange-button: #dea585;
+}
+
+*{
+    font-family: sans-serif;
+    /* border: 1px solid black */
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+#github{
+    color: #24292e;
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    text-decoration: none;
+    font-size: clamp(20px, 1.5vw, 75px);
+    font-family: sans-serif;
+}
+#github:visited{
+    color: #24292e;
+}
+#github:hover{
+    color: #2dba4e;
+}
+
+.bg-left-panel{
+    width: 25vw;
+    height: 100%;
+    background-color: var(--orange-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: clamp(40px,3vw,80px);
+}
+.title h1{
+    font-family: "Merriweather",sans-serif;
+    margin-left: 75px;
+}
+
+
+.content{
+    width: 75vw;
+    margin-left: 200px;
+    display: grid;
+    place-items: center;
+}
+
+form{
+    width: 30vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-wrapper, input, label{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+label{
+    box-sizing: border-box;
+    padding-left: 15px;
+    font-size: clamp(20px, 2vw,50px)
+}
+input{
+    box-sizing: border-box;
+    height: clamp(20px, 10vh, 60px);
+    padding: 15px;
+    font-size: clamp(20px, 2vmin,30px);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+
+.button-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.button{
+    width: 49%;
+    height: clamp(20px, 10vh, 60px);
+    font-size: clamp(20px, 2vmin,30px);
+    border-radius: 10px;
+    border: none;
+}
+
+#check-btn{
+    background-color: var(--green-button);
+}
+#clear-btn{
+    background-color: var(--orange-button);
+}
+
+
+.button:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
