@@ -15,7 +15,7 @@ const phoneNumberIsValid = () => {
 clearButton.addEventListener("click",(e) => {
     userInput.value="";
     e.preventDefault();
-
+    results.innerHTML = "<p></p>";
 
 })
 
@@ -24,12 +24,15 @@ checkButton.addEventListener("click", (e) =>{
 
     if (userInput.value === ""){
         alert("Please provide a phone number")
+        return;
     }
 
+    results.classList.toggle("hide");
     if(phoneNumberIsValid()) {
-        console.log("yes");
+        results.innerHTML = `<p>Valid US number: ${userInput.value}</p>`;
     }
     else{
-        console.log("no");
+        results.innerHTML = `<p>Invalid US number: ${userInput.value}</p>`;
+
     }
 })
